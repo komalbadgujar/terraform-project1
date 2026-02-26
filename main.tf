@@ -133,7 +133,7 @@ resource "aws_lb_listener" "web_listener" {
 resource "aws_launch_template" "web_template" {
   name_prefix   = "web-template"
   image_id      = "ami-051a31ab2f4d498f5" # Amazon Linux 2 (ap-south-1)
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
 
   user_data = base64encode(<<-EOF
 #!/bin/bash
